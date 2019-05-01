@@ -23,6 +23,11 @@ cpuspeed=$(grep 'Processor Speed:' <<<"$hw_data"  | xargs)
 cpucores=$(grep Cores: <<<"$hw_data"  | xargs)
 }
 
+getRamInfo()
+{
+	echo $ram
+}
+
 getDiskInfo()
 {
    #Print disk info in human redable format
@@ -61,33 +66,41 @@ echo "__________"
 printf "\n"
 }
 
-echo "================="
-echo "HomeWork 1"
-echo "Pranay (pranay.shah@gmail.com)"
-echo "================="
+if [ -z "$ram" ];
+ then 
+ getHardWareInfo
+fi 
 
-getHardWareInfo
 
-printf "\n"
-echo "Printing Information about $model ($modelInfo)"
+if [[ $# -eq 0 || "$1" == "all" ]] ; then
+	echo "================="
+	echo "HomeWork 1"
+	echo "Pranay (pranay.shah@gmail.com)"
+	echo "================="
 
-printbanner "Disk Info"
+	printf "\n"
+	echo "Printing Information about $model ($modelInfo)"
 
-getDiskInfo
+	printbanner "Disk Info"
 
-printbanner "CPU Info"
+	getDiskInfo
 
-getCPUInfo
+	printbanner "CPU Info"
 
-printbanner "RAM/Memory Info"
- 
-echo "$ram"
+	getCPUInfo
 
-printbanner "IP/Network Info"
+	printbanner "RAM/Memory Info"
+	 
+	getRamInfo
 
-getNetWorkInfo
+	printbanner "IP/Network Info"
 
-printf "\n"
+	getNetWorkInfo
+
+	printf "\n"
+fi
+
+
 
 
 
