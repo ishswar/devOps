@@ -25,11 +25,14 @@ cpucores=$(grep Cores: <<<"$hw_data"  | xargs)
 
 getRamInfo()
 {
+	printbanner "IP/Network Info"
 	echo $ram
 }
 
 getDiskInfo()
 {
+  
+  printbanner "Disk Info"
    #Print disk info in human redable format
    df -h
 }
@@ -37,6 +40,7 @@ getDiskInfo()
 getNetWorkInfo()
 {
 
+printbanner "RAM/Memory Info"
 #Get IP Address and MAC address
 macaddr=$(ifconfig | grep en0 -A3 | grep ether | xargs)
 ipaddress=$(ipconfig getifaddr en0)
@@ -47,7 +51,7 @@ echo "IP address: $ipaddress"
 
 getCPUInfo()
 {
-
+printbanner "CPU Info"
 # Get CPU info 
 sysctl -n machdep.cpu.brand_string
 
@@ -81,19 +85,19 @@ if [[ $# -eq 0 || "$1" == "all" ]] ; then
 	printf "\n"
 	echo "Printing Information about $model ($modelInfo)"
 
-	printbanner "Disk Info"
+
 
 	getDiskInfo
 
-	printbanner "CPU Info"
+
 
 	getCPUInfo
 
-	printbanner "RAM/Memory Info"
+
 	 
 	getRamInfo
 
-	printbanner "IP/Network Info"
+
 
 	getNetWorkInfo
 
