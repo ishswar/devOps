@@ -80,7 +80,7 @@ fi
 if [[ $# -eq 0 || "$1" == "all" ]] ; then
 	echo "================="
 	echo "HomeWork 1"
-	echo "Pranay (pranay.shah@gmail.com)"
+	echo "Pranay (https://github.com/ishswar)"
 	echo "================="
 
 	printf "\n"
