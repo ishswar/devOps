@@ -3,6 +3,7 @@
 
 echo "================="
 echo "HomeWork 1"
+echo "Pranay (pranay.shah@gmail.com)"
 echo "================="
 
 hw_data=$(/usr/sbin/system_profiler SPHardwareDataType)
