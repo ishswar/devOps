@@ -78,6 +78,10 @@ Intel(R) Core(TM) i7-4980HQ CPU @ 2.80GHz
 Processor Name: Intel Core i7
 Processor Speed: 2.8 GHz
 Total Number of Cores: 4
+
+
+
+
 ➜  DevOps01 git:(master) ✗ ./devops01b.sh -volumes     
 
 
@@ -90,6 +94,7 @@ devfs          356Ki  356Ki    0Bi   100%    1230                   0  100%   /d
 /dev/disk1s4   466Gi   11Gi   25Gi    31%      11 9223372036854775796    0%   /private/var/vm
 map -hosts       0Bi    0Bi    0Bi   100%       0                   0  100%   /net
 map auto_home    0Bi    0Bi    0Bi   100%       0                   0  100%   /home
+
 ➜  DevOps01 git:(master) ✗ ./devops01b.sh -cpu    
 
 
@@ -100,6 +105,9 @@ Intel(R) Core(TM) i7-4980HQ CPU @ 2.80GHz
 Processor Name: Intel Core i7
 Processor Speed: 2.8 GHz
 Total Number of Cores: 4
+
+
+
 ➜  DevOps01 git:(master) ✗ ./devops01b.sh -all
 =================
 HomeWork 1
@@ -141,6 +149,8 @@ __________
 MAC address: ether 60:f8:1d:a8:21:4c
 IP address: 10.98.201.67
 
+
+
 ➜  DevOps01 git:(master) ✗ ./devops01b.sh -abcd
 usage: ./devops01b.sh options
 
@@ -152,6 +162,8 @@ OPTIONS:
    -ram      	 Installed memory on this machine (in Gb)
    -cpu      	 CPU information of this machine 
    -volumes      Hard disk information of this machine 
+   
+   
 ➜  DevOps01 git:(master) ✗ ./devops01b.sh      
 No parameters were passed
 usage: ./devops01b.sh options
