@@ -2,7 +2,7 @@
 For DevOps learning
 
 Sample output from this scripts
-Scripts are only tested on MAC and will print Hardware inforamtion 
+Scripts are only tested on macintosh and will print Hardware inforamtion 
 
 You can either run program "<b>devops01a.sh</b>" and it will get all the hardward info 
 
