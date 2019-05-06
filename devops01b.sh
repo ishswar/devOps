@@ -99,3 +99,6 @@ if [[ -n $all ]];
  	  fi
 fi
 
+# Code reference  
+# https://www.lifewire.com/pass-arguments-to-bash-script-2200571 
+# https://rsalveti.wordpress.com/2007/04/03/bash-parsing-arguments-with-getopts/

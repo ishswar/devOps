@@ -47,7 +47,13 @@ macaddr=$(ifconfig | grep en0 -A3 | grep ether | xargs)
 ipaddress=$(ipconfig getifaddr en0)
 
 echo "MAC address: $macaddr"
-echo "IP address: $ipaddress"
+
+if [[  -n "$ipaddress" ]];
+then 
+	echo "IP address: $ipaddress"
+else
+	echo "IP address: <<No connectivity ?>>"
+fi
 }
 
 getCPUInfo()
